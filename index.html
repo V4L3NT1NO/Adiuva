@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Adiuva — La plataforma que evoluciona con tu equipo</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- NOISE GRAIN OVERLAY -->
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- CURSOR -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-dot" id="cursorDot"></div>
+
+  <!-- ═══════════════════════════════════ NAV ═══ -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#" class="logo">
+        <span class="logo-a">A</span><span class="logo-rest">diuva</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#problema" data-hover="Problema">Problema</a></li>
+        <li><a href="#solucion" data-hover="Solución">Solución</a></li>
+        <li><a href="#features" data-hover="Features">Features</a></li>
+      </ul>
+      <a href="#registro" class="nav-btn">
+        <span>Acceso anticipado</span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+      </a>
+      <button class="burger" id="burger">
+        <span></span><span></span>
+      </button>
+    </div>
+    <div class="mob-menu" id="mobMenu">
+      <a href="#problema">Problema</a>
+      <a href="#solucion">Solución</a>
+      <a href="#features">Features</a>
+      <a href="#registro" class="mob-cta">Acceso anticipado →</a>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════════ HERO ═══ -->
+  <section class="hero" id="hero">
+
+    <!-- Light leaks -->
+    <div class="leak leak-sage"></div>
+    <div class="leak leak-gold"></div>
+    <div class="leak leak-navy"></div>
+
+    <!-- Grid lines -->
+    <div class="hero-grid" aria-hidden="true">
+      <div class="vline vl1"></div>
+      <div class="vline vl2"></div>
+      <div class="vline vl3"></div>
+    </div>
+
+    <div class="hero-inner">
+      <div class="hero-left">
+        <div class="hero-eyebrow reveal">
+          <span class="pulse-dot"></span>
+          Beta · Próximamente
+        </div>
+
+        <h1 class="hero-h1 reveal reveal-d1">
+          <span class="line">La plataforma</span>
+          <span class="line accent-line">que crece</span>
+          <span class="line">con tu equipo.</span>
+        </h1>
+
+        <p class="hero-p reveal reveal-d2">
+          Adiuva unifica cada herramienta que tu equipo de desarrollo necesita — hoy y en el futuro, sin importar cómo evolucione la industria.
+        </p>
+
+        <div class="hero-actions reveal reveal-d3">
+          <a href="#registro" class="btn-gold magnetic">
+            <span>Solicitar acceso</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="#solucion" class="btn-outline magnetic">
+            Ver cómo funciona
+          </a>
+        </div>
+
+        <div class="hero-stats reveal reveal-d4">
+          <div class="hstat">
+            <span class="hstat-n" data-count="12">0</span>
+            <span class="hstat-l">Herramientas</span>
+          </div>
+          <div class="hstat-sep"></div>
+          <div class="hstat">
+            <span class="hstat-n" data-count="100">0</span><span class="hstat-unit">%</span>
+            <span class="hstat-l">Actualización</span>
+          </div>
+          <div class="hstat-sep"></div>
+          <div class="hstat">
+            <span class="hstat-n" data-count="1">0</span>
+            <span class="hstat-l">Plataforma</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-right reveal reveal-d2">
+        <div class="hero-card-stack">
+          <!-- Floating UI cards -->
+          <div class="ui-card card-main">
+            <div class="uic-header">
+              <div class="uic-dots">
+                <span></span><span></span><span></span>
+              </div>
+              <span class="uic-title">Dashboard · Sprint 14</span>
+              <span class="uic-badge live">● Live</span>
+            </div>
+            <div class="uic-body">
+              <div class="uic-row">
+                <div class="uic-metric">
+                  <span class="uic-val">87%</span>
+                  <span class="uic-key">Completado</span>
+                  <div class="uic-bar"><div class="uic-fill" style="width:87%"></div></div>
+                </div>
+                <div class="uic-metric">
+                  <span class="uic-val">14</span>
+                  <span class="uic-key">Tareas activas</span>
+                  <div class="uic-bar"><div class="uic-fill accent" style="width:55%"></div></div>
+                </div>
+              </div>
+              <div class="uic-chart">
+                <svg viewBox="0 0 200 60" fill="none" preserveAspectRatio="none">
+                  <defs>
+                    <linearGradient id="cg" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0%" stop-color="#7a9e8e" stop-opacity="0.4"/>
+                      <stop offset="100%" stop-color="#7a9e8e" stop-opacity="0"/>
+                    </linearGradient>
+                  </defs>
+                  <path d="M0 50 C20 45 40 30 60 28 S100 35 120 20 S160 10 200 5" stroke="#7a9e8e" stroke-width="1.5" fill="none"/>
+                  <path d="M0 50 C20 45 40 30 60 28 S100 35 120 20 S160 10 200 5 L200 60 L0 60 Z" fill="url(#cg)"/>
+                </svg>
+              </div>
+              <div class="uic-tasks">
+                <div class="uic-task done">
+                  <svg viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" stroke="currentColor" stroke-width="1"/><path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+                  <span>Diseño del módulo de IA</span>
+                </div>
+                <div class="uic-task done">
+                  <svg viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" stroke="currentColor" stroke-width="1"/><path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+                  <span>API de diagramas v2</span>
+                </div>
+                <div class="uic-task active">
+                  <svg viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" stroke="currentColor" stroke-width="1" stroke-dasharray="3 2"/></svg>
+                  <span>Integración de reportes</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Float chip: team -->
+          <div class="float-chip chip-team">
+            <div class="chip-avatars">
+              <div class="chip-av" style="background:#5a7a6a">CM</div>
+              <div class="chip-av" style="background:#4a6a9a">LP</div>
+              <div class="chip-av" style="background:#8a6a3a">AR</div>
+            </div>
+            <div class="chip-text">
+              <strong>3 online</strong>
+              <span>Editando ahora</span>
+            </div>
+          </div>
+
+          <!-- Float chip: AI -->
+          <div class="float-chip chip-ai">
+            <div class="chip-icon">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+            </div>
+            <div class="chip-text">
+              <strong>IA Asistente</strong>
+              <span>Diagrama generado ✓</span>
+            </div>
+          </div>
+
+          <!-- Float chip: update -->
+          <div class="float-chip chip-update">
+            <div class="chip-dot"></div>
+            <span>Nueva metodología disponible</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-scroll" aria-hidden="true">
+      <span>scroll</span>
+      <div class="scroll-track"><div class="scroll-thumb"></div></div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ LOGOS BAR ═══ -->
+  <section class="logos-bar">
+    <p class="logos-label">Compatible con tu stack actual</p>
+    <div class="logos-track">
+      <div class="logos-inner">
+        <span class="tech-pill">Jira</span>
+        <span class="tech-pill">GitHub</span>
+        <span class="tech-pill">Figma</span>
+        <span class="tech-pill">Notion</span>
+        <span class="tech-pill">Slack</span>
+        <span class="tech-pill">Linear</span>
+        <span class="tech-pill">Confluence</span>
+        <span class="tech-pill">GitLab</span>
+        <!-- repeat for loop -->
+        <span class="tech-pill">Jira</span>
+        <span class="tech-pill">GitHub</span>
+        <span class="tech-pill">Figma</span>
+        <span class="tech-pill">Notion</span>
+        <span class="tech-pill">Slack</span>
+        <span class="tech-pill">Linear</span>
+        <span class="tech-pill">Confluence</span>
+        <span class="tech-pill">GitLab</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════ PROBLEMA ═══ -->
+  <section class="section problema" id="problema">
+    <div class="container">
+      <div class="section-eyebrow reveal">— El problema</div>
+      <h2 class="section-title reveal reveal-d1">
+        Demasiadas herramientas.<br /><em>Ninguna que dure.</em>
+      </h2>
+
+      <div class="prob-grid">
+        <div class="prob-card reveal reveal-d1">
+          <div class="prob-num">01</div>
+          <div class="prob-icon">
+            <svg viewBox="0 0 48 48" fill="none"><rect x="5" y="5" width="17" height="17" rx="3" stroke="currentColor" stroke-width="1.5"/><rect x="26" y="5" width="17" height="17" rx="3" stroke="currentColor" stroke-width="1.5"/><rect x="5" y="26" width="17" height="17" rx="3" stroke="currentColor" stroke-width="1.5"/><rect x="26" y="26" width="17" height="17" rx="3" stroke="currentColor" stroke-width="1.5"/></svg>
+          </div>
+          <h3>Fragmentación del flujo</h3>
+          <p>Cada herramienta vive en su propio silo. Los datos no sincronizan, el equipo pierde horas cambiando de contexto y las decisiones se toman con información contradictoria.</p>
+          <div class="prob-tag">Carga cognitiva</div>
+        </div>
+        <div class="prob-card reveal reveal-d2">
+          <div class="prob-num">02</div>
+          <div class="prob-icon">
+            <svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="18" stroke="currentColor" stroke-width="1.5"/><path d="M24 14v10l7 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="10" y1="10" x2="38" y2="38" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.3"/></svg>
+          </div>
+          <h3>Herramientas que caducan</h3>
+          <p>La IA lo está cambiando todo. Una herramienta especializada de hoy es una herramienta obsoleta en dos años. Tu equipo queda atrapado en procesos de ayer.</p>
+          <div class="prob-tag">Obsolescencia</div>
+        </div>
+        <div class="prob-card reveal reveal-d3">
+          <div class="prob-num">03</div>
+          <div class="prob-icon">
+            <svg viewBox="0 0 48 48" fill="none"><path d="M8 36V20l16-10 16 10v16" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M20 36V26h8v10" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M4 36h40" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="40" cy="12" r="6" stroke="currentColor" stroke-width="1.5"/><path d="M40 10v4M38 12h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Costos ocultos acumulados</h3>
+          <p>Licencias de herramientas que nadie usa. Integraciones que se rompen. Onboarding infinito. El software de gestión termina costando más que el producto final.</p>
+          <div class="prob-tag">Costos ocultos</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════ SOLUCIÓN ═══ -->
+  <section class="section solucion" id="solucion">
+    <div class="leak leak-sol-sage"></div>
+    <div class="leak leak-sol-gold"></div>
+    <div class="container">
+      <div class="sol-layout">
+        <div class="sol-left reveal">
+          <div class="section-eyebrow light">— La solución</div>
+          <h2 class="section-title light">
+            Una plataforma.<br /><em>Siempre actual.</em>
+          </h2>
+          <p class="sol-desc">
+            Adiuva está construida como un sistema orientado a servicios, diseñado para crecer con la industria. Comenzamos con las herramientas más demandadas y expandimos continuamente.
+          </p>
+          <ul class="sol-list">
+            <li class="reveal reveal-d1">
+              <div class="sol-check">
+                <svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <div>
+                <strong>Actualización continua</strong>
+                <span>Cada nueva metodología se integra a la plataforma, no a una herramienta aislada que luego abandonarás.</span>
+              </div>
+            </li>
+            <li class="reveal reveal-d2">
+              <div class="sol-check">
+                <svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <div>
+                <strong>Un ecosistema unificado</strong>
+                <span>Desde diseño hasta QA, todos trabajan con datos compartidos en tiempo real, sin silos de información.</span>
+              </div>
+            </li>
+            <li class="reveal reveal-d3">
+              <div class="sol-check">
+                <svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <div>
+                <strong>Arquitectura modular</strong>
+                <span>Activa solo lo que necesitas hoy. Expande mañana sin migrar de plataforma ni perder histórico.</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="sol-right reveal reveal-d2">
+          <div class="orbit-wrap">
+            <div class="orbit-core">
+              <span class="orbit-logo-a">A</span>
+              <span class="orbit-logo-t">diuva</span>
+            </div>
+            <svg class="orbit-ring ring-1" viewBox="0 0 340 340">
+              <circle cx="170" cy="170" r="120" fill="none" stroke="rgba(122,158,142,0.15)" stroke-width="1" stroke-dasharray="6 10"/>
+            </svg>
+            <svg class="orbit-ring ring-2" viewBox="0 0 460 460">
+              <circle cx="230" cy="230" r="170" fill="none" stroke="rgba(184,150,46,0.08)" stroke-width="1" stroke-dasharray="3 14"/>
+            </svg>
+            <div class="orbit-modules">
+              <div class="omod" style="--a:0"><span>Gestión</span></div>
+              <div class="omod" style="--a:60"><span>Diagramas</span></div>
+              <div class="omod" style="--a:120"><span>IA</span></div>
+              <div class="omod" style="--a:180"><span>Reportes</span></div>
+              <div class="omod" style="--a:240"><span>Sprints</span></div>
+              <div class="omod new" style="--a:300"><span>+ Nuevo</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════ FEATURES ═══ -->
+  <section class="section features" id="features">
+    <div class="container">
+      <div class="section-eyebrow reveal">— Características</div>
+      <h2 class="section-title reveal reveal-d1">
+        Construido para cada etapa<br /><em>del desarrollo</em>
+      </h2>
+
+      <div class="feat-bento">
+        <!-- Big card -->
+        <div class="feat-card bento-big reveal">
+          <div class="feat-glow glow-sage"></div>
+          <div class="feat-tag">Central</div>
+          <h3>Hub unificado del proyecto</h3>
+          <p>Un tablero que conecta tareas, diagramas, documentación y métricas. Sin cambiar de pestaña, sin perder contexto.</p>
+          <div class="feat-visual vis-dashboard">
+            <div class="mini-kanban">
+              <div class="mk-col">
+                <div class="mk-head">Por hacer</div>
+                <div class="mk-card">Onboarding UX</div>
+                <div class="mk-card">API Auth</div>
+              </div>
+              <div class="mk-col">
+                <div class="mk-head">En progreso</div>
+                <div class="mk-card active">Módulo IA</div>
+                <div class="mk-card active">Dashboard</div>
+              </div>
+              <div class="mk-col">
+                <div class="mk-head">Listo</div>
+                <div class="mk-card done">Diagramas v1</div>
+                <div class="mk-card done">Sprint setup</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Medium card -->
+        <div class="feat-card bento-med reveal reveal-d1">
+          <div class="feat-glow glow-gold"></div>
+          <div class="feat-tag">IA</div>
+          <h3>Asistente IA nativo</h3>
+          <p>Genera diagramas, sugiere arquitecturas y automatiza documentación directamente en tu flujo.</p>
+          <div class="feat-visual vis-ai">
+            <div class="ai-bubble user">¿Genera el diagrama de flujo de auth?</div>
+            <div class="ai-bubble bot">
+              <span class="ai-typing"></span>
+              Generando diagrama UML...
+            </div>
+          </div>
+        </div>
+
+        <!-- Small card -->
+        <div class="feat-card bento-sm reveal reveal-d2">
+          <div class="feat-glow glow-sage"></div>
+          <div class="feat-tag">Metodología</div>
+          <h3>Cualquier metodología</h3>
+          <p>Scrum, Kanban, Shape Up. Cambia cuando quieras, sin migrar datos.</p>
+          <div class="feat-visual vis-methods">
+            <span class="meth active">Scrum</span>
+            <span class="meth">Kanban</span>
+            <span class="meth">Shape Up</span>
+            <span class="meth dim">AI Driven →</span>
+          </div>
+        </div>
+
+        <!-- Small card -->
+        <div class="feat-card bento-sm reveal reveal-d3">
+          <div class="feat-glow glow-gold"></div>
+          <div class="feat-tag">Colaboración</div>
+          <h3>Diagramas en tiempo real</h3>
+          <p>Edita con todo el equipo simultáneamente. Historial completo de versiones.</p>
+          <div class="feat-visual vis-collab">
+            <div class="collab-avatars">
+              <div class="ca" style="--bg:#5a7a6a">C</div>
+              <div class="ca" style="--bg:#4a5a8a">L</div>
+              <div class="ca" style="--bg:#8a6a3a">A</div>
+              <div class="ca plus">+4</div>
+            </div>
+            <div class="collab-pulse"></div>
+          </div>
+        </div>
+
+        <!-- Wide card -->
+        <div class="feat-card bento-wide reveal reveal-d1">
+          <div class="feat-glow glow-sage"></div>
+          <div class="feat-tag">Evolución</div>
+          <h3>La plataforma que crece con la industria</h3>
+          <p>Nuevas metodologías, integraciones y tecnologías se incorporan continuamente. Adiuva evoluciona, tú no migras.</p>
+          <div class="feat-visual vis-timeline">
+            <div class="tl">
+              <div class="tl-node done"><span>Scrum</span></div>
+              <div class="tl-line done"></div>
+              <div class="tl-node done"><span>Kanban</span></div>
+              <div class="tl-line done"></div>
+              <div class="tl-node done"><span>Shape Up</span></div>
+              <div class="tl-line upcoming"></div>
+              <div class="tl-node upcoming"><span>AI Driven</span></div>
+              <div class="tl-line upcoming"></div>
+              <div class="tl-node future"><span>Next →</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════ PROCESO ═══ -->
+  <section class="section proceso">
+    <div class="container">
+      <div class="section-eyebrow reveal">— Cómo funciona</div>
+      <h2 class="section-title reveal reveal-d1">Tres pasos para<br /><em>unificar tu equipo</em></h2>
+      <div class="steps-row">
+        <div class="step-item reveal reveal-d1">
+          <div class="step-n">01</div>
+          <h3>Regístrate</h3>
+          <p>Crea tu cuenta y configura tu espacio en menos de 5 minutos. Sin tarjeta de crédito.</p>
+        </div>
+        <div class="step-connector reveal reveal-d2"></div>
+        <div class="step-item reveal reveal-d2">
+          <div class="step-n">02</div>
+          <h3>Invita a tu equipo</h3>
+          <p>Agrega a todos los roles. Cada uno accede a las herramientas que necesita dentro del mismo ecosistema.</p>
+        </div>
+        <div class="step-connector reveal reveal-d3"></div>
+        <div class="step-item reveal reveal-d3">
+          <div class="step-n">03</div>
+          <h3>Empieza a construir</h3>
+          <p>Gestiona sprints, crea diagramas, usa el asistente IA — todo desde un solo lugar.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════ TESTIMONIOS ═══ -->
+  <section class="section testimonios">
+    <div class="container">
+      <div class="section-eyebrow reveal">— Primeros usuarios</div>
+      <div class="testi-grid">
+        <div class="testi-card reveal reveal-d1">
+          <div class="testi-quote">"</div>
+          <p>Por fin una plataforma que no necesita cinco integraciones para hacer lo básico. El concepto de Adiuva es exactamente lo que faltaba.</p>
+          <div class="testi-author">
+            <div class="testi-av" style="--bg: linear-gradient(135deg,#5a7a6a,#3a5a8a)">CM</div>
+            <div>
+              <strong>Carlos M.</strong>
+              <span>Tech Lead, Startup SaaS</span>
+            </div>
+            <div class="testi-stars">★★★★★</div>
+          </div>
+        </div>
+        <div class="testi-card reveal reveal-d2">
+          <div class="testi-quote">"</div>
+          <p>La idea de una plataforma que evoluciona con la industria en lugar de quedarse estancada es exactamente lo que el mercado necesita ahora.</p>
+          <div class="testi-author">
+            <div class="testi-av" style="--bg: linear-gradient(135deg,#6a4a8a,#3a5a8a)">LP</div>
+            <div>
+              <strong>Lucía P.</strong>
+              <span>Engineering Manager</span>
+            </div>
+            <div class="testi-stars">★★★★★</div>
+          </div>
+        </div>
+        <div class="testi-card reveal reveal-d3">
+          <div class="testi-quote">"</div>
+          <p>Trabajamos con 6 herramientas distintas. La promesa de Adiuva de unificarlas bajo un sistema actualizado es un cambio de juego.</p>
+          <div class="testi-author">
+            <div class="testi-av" style="--bg: linear-gradient(135deg,#8a6a3a,#5a7a6a)">AR</div>
+            <div>
+              <strong>Andrés R.</strong>
+              <span>CTO, Agencia Digital</span>
+            </div>
+            <div class="testi-stars">★★★★★</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════ REGISTRO ═══ -->
+  <section class="section registro" id="registro">
+    <div class="leak leak-reg-sage"></div>
+    <div class="leak leak-reg-gold"></div>
+    <div class="container">
+      <div class="reg-layout">
+        <div class="reg-left reveal">
+          <div class="section-eyebrow light">— Acceso anticipado</div>
+          <h2 class="section-title light">
+            Sé de los primeros<br /><em>en probarlo.</em>
+          </h2>
+          <p class="reg-desc">Regístrate y obtén acceso prioritario a la beta, con todas las funciones desbloqueadas y soporte directo del equipo fundador.</p>
+          <ul class="reg-perks">
+            <li>
+              <div class="perk-icon">
+                <svg viewBox="0 0 20 20" fill="none"><path d="M3 10l4 4 10-10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              Acceso gratuito durante la beta
+            </li>
+            <li>
+              <div class="perk-icon">
+                <svg viewBox="0 0 20 20" fill="none"><path d="M3 10l4 4 10-10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              Precio especial de por vida para early adopters
+            </li>
+            <li>
+              <div class="perk-icon">
+                <svg viewBox="0 0 20 20" fill="none"><path d="M3 10l4 4 10-10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              Influencia directa en el roadmap del producto
+            </li>
+          </ul>
+        </div>
+
+        <div class="reg-right reveal reveal-d2">
+          <div class="form-glass">
+            <div class="form-glass-header">
+              <div class="fgh-badge">Beta gratuita</div>
+              <h3>Reserva tu lugar</h3>
+              <p>Sin tarjeta. Sin compromiso.</p>
+            </div>
+            <form id="mainForm" novalidate>
+              <div class="fg-group">
+                <label for="fn">Nombre completo</label>
+                <input type="text" id="fn" placeholder="Tu nombre" required />
+                <span class="fg-err" id="fnErr"></span>
+              </div>
+              <div class="fg-group">
+                <label for="em">Correo electrónico</label>
+                <input type="email" id="em" placeholder="tu@empresa.com" required />
+                <span class="fg-err" id="emErr"></span>
+              </div>
+              <div class="fg-row">
+                <div class="fg-group">
+                  <label for="eq">Tamaño del equipo</label>
+                  <div class="sel-wrap">
+                    <select id="eq" required>
+                      <option value="" disabled selected>Selecciona</option>
+                      <option>Solo yo</option>
+                      <option>2–5 personas</option>
+                      <option>6–20 personas</option>
+                      <option>21+ personas</option>
+                    </select>
+                    <svg viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                  </div>
+                  <span class="fg-err" id="eqErr"></span>
+                </div>
+                <div class="fg-group">
+                  <label for="rl">Tu rol</label>
+                  <div class="sel-wrap">
+                    <select id="rl">
+                      <option value="" disabled selected>Selecciona</option>
+                      <option>Desarrollador/a</option>
+                      <option>Tech Lead</option>
+                      <option>Product Manager</option>
+                      <option>CTO / Fundador</option>
+                      <option>Otro</option>
+                    </select>
+                    <svg viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                  </div>
+                </div>
+              </div>
+              <button type="submit" class="submit-btn magnetic" id="submitBtn">
+                <span class="sb-text">Solicitar acceso gratuito</span>
+                <svg class="sb-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                <div class="sb-loader" id="sbLoader"></div>
+              </button>
+              <p class="form-note">Nunca spam. Tus datos, protegidos.</p>
+            </form>
+            <div class="form-ok" id="formOk">
+              <div class="ok-icon">
+                <svg viewBox="0 0 64 64" fill="none"><circle cx="32" cy="32" r="30" stroke="currentColor" stroke-width="1.5"/><path d="M20 32l8 8 16-16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <h3>¡Estás dentro!</h3>
+              <p>Te notificaremos cuando la beta esté lista. Comparte Adiuva con tu equipo.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════ FOOTER ═══ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <span class="logo-a">A</span><span class="logo-rest">diuva</span>
+          <p>La plataforma que evoluciona con tu equipo.</p>
+        </div>
+        <span class="footer-copy">© 2026 Adiuva. Todos los derechos reservados.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
